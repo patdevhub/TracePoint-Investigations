@@ -1,4 +1,4 @@
-# TracePoint Investigations — testing and demo
+# TracePoint Investigations - testing and demo
 
 TracePoint is an academic investigation workspace built with React, ASP.NET Core, Entity Framework Core, Dapper and SQL Server. Users review a case, compare suspects, examine evidence and submit an investigation conclusion.
 
