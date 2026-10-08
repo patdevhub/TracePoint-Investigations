@@ -1,0 +1,42 @@
+
+# Node.js / React
+**/node_modules/
+**/dist/
+**/coverage/
+**/.env
+**/.env.*
+!**/.env.example
+
+# ASP.NET Core
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/*.suo
+
+# Application settings containing local credentials
+**/appsettings.json
+**/appsettings.*.json
+!**/appsettings.example.json
+
+# Private investigation evidence
+**/PrivateEvidence/
+**/TestResults/
+**/sample-statement.txt
+**/downloaded-statement.txt
+
+# Database files and backups
+*.mdf
+*.ldf
+*.bak
+*.db
+
+# Credentials and certificates
+*.pfx
+*.p12
+*.pem
+*.key
+
+# System files
+.DS_Store
+Thumbs.db

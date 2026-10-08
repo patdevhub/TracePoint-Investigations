@@ -1,0 +1,6 @@
+@TracePointAPI_HostAddress = http://localhost:5291
+
+GET {{TracePointAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,719 @@
+/* =========================================================
+   TRACEPOINT INVESTIGATIONS
+   GLOBAL STYLING
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #18181b;
+  color: #e5e7eb;
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 18px 40px;
+  background: #212124;
+  border-bottom: 1px solid #33333a;
+}
+
+.navigation a {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.navigation a:hover {
+  color: #fbbf24;
+}
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+.home {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 24, 27, 0.75);
+  z-index: 0;
+}
+
+.home h1,
+.home h2,
+.home p,
+.home button {
+  position: relative;
+  z-index: 1;
+}
+
+.home h1 {
+  font-size: 42px;
+  letter-spacing: 3px;
+  color: #f4f4f5;
+  margin-bottom: 10px;
+}
+
+.home h2 {
+  font-size: 26px;
+  color: #fbbf24;
+  letter-spacing: 2px;
+}
+
+.home p {
+  max-width: 650px;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #a1a1aa;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+  padding: 13px 24px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 6px;
+  background: #d97706;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   GENERAL PAGES
+   ========================================================= */
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 45px 30px;
+}
+
+.page h1 {
+  color: #f4f4f5;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.page p {
+  color: #a1a1aa;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FULL-HEIGHT BACKGROUND PAGES
+   ========================================================= */
+
+.case-page,
+.evidence-page,
+.investigation-page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.investigation-page {
+  background-position: 65% 25%;
+}
+
+.case-page::before,
+.evidence-page::before,
+.investigation-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 24, 27, 0.35);
+  z-index: 0;
+}
+
+.case-page::before {
+  background: rgba(24, 24, 27, 0.5);
+}
+
+.investigation-page::before {
+  background: rgba(24, 24, 27, 0.05);
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  width: 100%;
+  text-align: left;
+}
+
+.case-page .page-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.investigation-page .page-content {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.page-content h1 {
+  color: #f4f4f5;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.page-content p {
+  color: #a1a1aa;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   SUSPECT CARDS
+   ========================================================= */
+
+.suspect-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.suspect-card {
+  background: #212124;
+  padding: 25px;
+  border: 1px solid #33333a;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.suspect-card:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+}
+
+.suspect-card h2 {
+  color: #f4f4f5;
+  margin-top: 0;
+}
+
+.suspect-card h3 {
+  color: #fbbf24;
+  font-size: 15px;
+}
+
+.suspect-card p {
+  color: #a1a1aa;
+}
+
+.suspect-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.suspect-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #33333a;
+}
+
+.suspect-card-header h2 {
+  margin: 0;
+}
+
+.suspect-card-header h3 {
+  margin: 4px 0 0;
+}
+
+/* =========================================================
+   SELECTED SUSPECT
+   ========================================================= */
+
+.selected-suspect {
+  margin-top: 30px;
+  padding: 25px;
+  background: #212124;
+  border: 1px solid #d97706;
+  border-radius: 10px;
+}
+
+.selected-suspect h2 {
+  color: #fbbf24;
+}
+
+/* =========================================================
+   EVIDENCE
+   ========================================================= */
+
+.evidence-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.evidence-card {
+  background: #212124;
+  padding: 25px;
+  border: 1px solid #33333a;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.evidence-card:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+}
+
+.evidence-card h2 {
+  color: #f4f4f5;
+  font-size: 20px;
+}
+
+.evidence-card strong {
+  color: #fbbf24;
+}
+
+.selected-evidence {
+  margin-top: 30px;
+  padding: 25px;
+  background: #212124;
+  border: 1px solid #33333a;
+  border-radius: 10px;
+}
+
+.selected-evidence h2 {
+  color: #fbbf24;
+}
+
+/* =========================================================
+   INVESTIGATION FORM
+   ========================================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 650px;
+  width: 100%;
+  background: #212124;
+  padding: 30px;
+  border: 1px solid #33333a;
+  border-radius: 10px;
+  text-align: left;
+}
+
+form label {
+  color: #d4d4d8;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+select,
+textarea {
+  padding: 13px;
+  font-size: 15px;
+  color: #e5e7eb;
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 6px;
+  outline: none;
+}
+
+select:focus,
+textarea:focus {
+  border-color: #f59e0b;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* =========================================================
+   SUCCESS / MESSAGE
+   ========================================================= */
+
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  max-width: 650px;
+  width: 100%;
+  background: #212124;
+  border: 1px solid #d97706;
+  border-radius: 6px;
+  color: #fde68a;
+}
+
+/* =========================================================
+   CHATBOT BUTTON
+   ========================================================= */
+
+.chatbot-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+
+  width: 60px;
+  height: 60px;
+
+  padding: 0;
+  margin: 0;
+
+  border-radius: 50%;
+  border: 1px solid #f59e0b;
+
+  background: #212124;
+  color: white;
+
+  font-size: 25px;
+  cursor: pointer;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-button:hover {
+  background: #3f3f46;
+  border-color: #fbbf24;
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   CHATBOT WINDOW
+   ========================================================= */
+
+.chatbot {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 360px;
+  height: 500px;
+
+  background: #212124;
+
+  border: 1px solid #33333a;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  z-index: 9999;
+}
+
+/* =========================================================
+   CHATBOT HEADER
+   ========================================================= */
+
+.chatbot-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px;
+
+  background: #18181b;
+
+  border-bottom: 1px solid #33333a;
+}
+
+.chatbot-header strong {
+  display: block;
+
+  color: #f4f4f5;
+
+  font-size: 16px;
+}
+
+.chatbot-header span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #fbbf24;
+
+  font-size: 12px;
+}
+
+/* =========================================================
+   CHATBOT CLOSE BUTTON
+   ========================================================= */
+
+.chatbot-close {
+  margin: 0;
+
+  width: 30px;
+  height: 30px;
+
+  padding: 0;
+
+  background: transparent;
+
+  color: #a1a1aa;
+
+  font-size: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-close:hover {
+  background: transparent;
+
+  color: white;
+
+  transform: none;
+}
+
+/* =========================================================
+   CHATBOT MESSAGES
+   ========================================================= */
+
+.chatbot-messages {
+  flex: 1;
+
+  padding: 15px;
+
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  background: #18181b;
+}
+
+.chat-message {
+  max-width: 80%;
+
+  padding: 10px 13px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+.chat-message.bot {
+  align-self: flex-start;
+
+  background: #27272a;
+
+  color: #d4d4d8;
+
+  border: 1px solid #33333a;
+}
+
+.chat-message.user {
+  align-self: flex-end;
+
+  background: #d97706;
+
+  color: white;
+}
+
+/* =========================================================
+   CHATBOT INPUT
+   ========================================================= */
+
+.chatbot-form {
+  display: flex;
+
+  flex-direction: row;
+
+  gap: 8px;
+
+  padding: 12px;
+
+  border-top: 1px solid #33333a;
+
+  background: #212124;
+}
+
+.chatbot-form input {
+  flex: 1;
+
+  min-width: 0;
+
+  padding: 11px;
+
+  border: 1px solid #3f3f46;
+
+  border-radius: 6px;
+
+  background: #18181b;
+
+  color: white;
+
+  outline: none;
+
+  font-size: 14px;
+}
+
+.chatbot-form input::placeholder {
+  color: #71717a;
+}
+
+.chatbot-form input:focus {
+  border-color: #f59e0b;
+}
+
+.chatbot-form button {
+  margin: 0;
+
+  width: 45px;
+
+  min-width: 45px;
+
+  padding: 0;
+
+  background: #d97706;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.chatbot-form button:hover {
+  background: #f59e0b;
+
+  transform: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .suspect-list,
+  .evidence-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navigation {
+    gap: 18px;
+
+    padding: 18px 25px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .navigation {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .suspect-list,
+  .evidence-list {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 30px 15px;
+  }
+
+  .home h1 {
+    font-size: 28px;
+  }
+
+  .home h2 {
+    font-size: 21px;
+  }
+
+  .home p {
+    font-size: 15px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* CHATBOT ON MOBILE */
+
+  .chatbot {
+    right: 10px;
+    bottom: 10px;
+
+    width: calc(100% - 20px);
+
+    height: 480px;
+  }
+
+  .chatbot-button {
+    right: 15px;
+    bottom: 15px;
+
+    width: 58px;
+    height: 58px;
+  }
+}

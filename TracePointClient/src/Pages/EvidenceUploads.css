@@ -1,0 +1,121 @@
+
+.evidence-upload-panel,
+.uploaded-evidence-section {
+  background: #202024;
+  border: 1px solid #414149;
+  border-radius: 12px;
+  padding: 28px;
+  margin-top: 35px;
+  color: #f5f5f7;
+}
+
+.evidence-upload-panel h2,
+.uploaded-evidence-section h2 {
+  color: #ffb020;
+  margin-top: 0;
+}
+
+.evidence-upload-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.evidence-upload-panel label {
+  font-weight: 600;
+}
+
+.evidence-upload-panel input,
+.evidence-upload-panel select,
+.evidence-upload-panel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background: #2b2d33;
+  border: 1px solid #555761;
+  border-radius: 7px;
+  padding: 13px;
+  color: white;
+  font: inherit;
+}
+
+.evidence-upload-panel button,
+.uploaded-evidence-heading button,
+.evidence-download-link {
+  background: #e98400;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.evidence-upload-panel button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-error {
+  color: #ffaaaa;
+}
+
+.upload-success {
+  color: #a7f3b8;
+}
+
+.uploaded-evidence-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.uploaded-evidence-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.uploaded-evidence-card {
+  background: #292b31;
+  border: 1px solid #414149;
+  border-radius: 10px;
+  padding: 22px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.uploaded-evidence-card h3 {
+  color: #f5f5f7;
+}
+
+.uploaded-evidence-card p {
+  color: #c5c5cf;
+  line-height: 1.6;
+}
+
+.document-reference {
+  color: #ffb020;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.evidence-download-link {
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .evidence-upload-panel,
+  .uploaded-evidence-section {
+    padding: 18px;
+  }
+
+  .uploaded-evidence-list {
+    grid-template-columns: 1fr;
+  }
+}

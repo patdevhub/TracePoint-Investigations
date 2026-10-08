@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../TracePointAPI.Tests/TracePointAPI.Tests.csproj" Id="d5d7de4d-1bff-4529-82cf-7e7154dc1e58" />
+  <Project Path="TracePointAPI.csproj" />
+</Solution>
