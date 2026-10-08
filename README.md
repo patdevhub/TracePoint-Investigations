@@ -1,4 +1,4 @@
-# TracePoint Investigations
+# TracePoint Investigation Platform
 
 **A full-stack digital investigation and evidence-management application**
 
