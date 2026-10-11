@@ -1,7 +1,7 @@
 # TracePoint Investigation Platform
 
-**A full-stack digital investigation and evidence-management application
-**Group Members**
+**A full-stack digital investigation and evidence-management application**
+**Group Members:**
 **
 1.	Patrick Mamela Abbi     202418674
 2.	Ryan Mehluli Shabangu    202514586
