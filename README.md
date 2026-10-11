@@ -10,6 +10,7 @@
 5.	Hlulani Lesley Baladzi 202329085
 6.	Lwanele Zinhle Nkosi  202549247
 
+Deployment URL: https://tracepoint-client.onrender.com
 
 ![Status](https://img.shields.io/badge/status-academic%20prototype-orange) ![Backend](https://img.shields.io/badge/backend-ASP.NET%20Core%2010-blue) ![Frontend](https://img.shields.io/badge/frontend-React-61dafb) ![Database](https://img.shields.io/badge/database-SQL%20Server-lightgrey)
 
